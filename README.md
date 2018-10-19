@@ -14,5 +14,8 @@ username
 password
 ```
 
-현재 `postgres` 사용중입니다.
-경로는 `/src/ormConfig.ts` 입니다.
+현재 `postgres` 사용.
+
+DATABASE `nuber` 사용.
+
+경로는 `/src/ormConfig.ts`
