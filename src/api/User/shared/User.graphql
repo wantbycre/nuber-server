@@ -7,10 +7,8 @@ type User {
     age: Int
     password: String
     phoneNumber: String
-    verifiedPhoneNuber: Boolean!
+    verifiedPhoneNumber: Boolean!
     profilePhoto: String
-    createdAt: String!
-    updateAt: String
     fullName: String
     isDriving: Boolean!
     isRiding: Boolean!
@@ -18,4 +16,10 @@ type User {
     lastLng: Float
     lastLat: Float
     lastOrientation: Float
+    createdAt: String!
+    updatedAt: String
+}
+
+type Query {
+    user: User
 }
