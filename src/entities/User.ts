@@ -12,6 +12,7 @@ import {
     CreateDateColumn, 
     Entity, 
     PrimaryGeneratedColumn, 
+    UpdateDateColumn
 } from "typeorm";
 
 const BCRYPT_ROUNDS = 10;
@@ -68,7 +69,7 @@ class User extends BaseEntity {
     lastOrientation: number;
     
     @CreateDateColumn() createdAt: string;
-    @CreateDateColumn() updatedAt: string;
+    @UpdateDateColumn() updatedAt: string;
     
     get fullName(): string {
         return `${this.firstName} ${this.lastName}`;
