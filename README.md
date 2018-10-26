@@ -5,7 +5,7 @@ Server for the (N)Uber Clone Course on Nomad Academy. GraphQL, Typescript, NodeJ
 
 ### Public Resolvers:
 
-- [ ] Sign In / Sing up with Facebook (페이스북 연결, 로그인/가입)
+- [X] Sign In / Sing up with Facebook (페이스북 연결, 로그인/가입)
 - [ ] Sign In with Email (이메일 로그인)
 - [ ] Start Phone Nuber Verification (인증 문자 전송)
 - [ ] Compete Phone Nuber Verification (인증 문자 확인)
@@ -15,6 +15,8 @@ Server for the (N)Uber Clone Course on Nomad Academy. GraphQL, Typescript, NodeJ
 
 ### Private Resolvers:
 
+- [ ] Generate JWT (JWT인증)
+- [ ] Verify JWWT(가입 확인)
 - [ ] Verify Email (Email 확인)
 - [ ] Get my Profile (로그인 후 : 나의 프로필 출력)
 - [ ] Update my Profile (나의 프로필 수정)
