@@ -2,7 +2,7 @@
 // TODO: 맥으로 옮긴다면 사용
 // TODO: yarn global add node-gyp 
 // TODO: yarn global add bcrypt
-import bcrypt from "bcrypt-nodejs";
+import bcrypt from "bcrypt";
 import { IsEmail } from "class-validator";
 import { 
     BaseEntity, 
@@ -20,7 +20,6 @@ import {
 import Chat from './Chat';
 import Message from "./Message";
 import Ride from "./Ride";
-import Verification from "./Verification";
 
 const BCRYPT_ROUNDS = 10;
 
@@ -82,9 +81,6 @@ class User extends BaseEntity {
 
     @OneToMany(type => Message, message => message.user)
     messages: Message[];
-
-    @OneToMany(type => Verification, verification => verification.user)
-    verifications: Verification[];
 
     @OneToMany(type => Ride, ride => ride.passenger)
     ridesAsPassenger: Ride[];
