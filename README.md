@@ -8,15 +8,18 @@ Server for the (N)Uber Clone Course on Nomad Academy. GraphQL, Typescript, NodeJ
 - [X] Sign In / Sing up with Facebook (페이스북 연결, 로그인/가입)
 - [X] Sign In with Email (이메일 로그인) 현재 테스트는 불가, 아래 인증문자 작업완료 후 가능
 - [X] Start Phone Nuber Verification (인증 문자 전송) * 1.34 chapter에서 twillo 가입해서 문자 서비스 이용하는 강의가 나오는데, 신용카드 등록해서 사야함...젠장, 일단 진행해보고 더 진행이 안될경우 구입하도록! 구입후 .env에서 `TWILIO_TOKEN=`으로 등록~ 1.35에서 다시 시작해야함 실제 문자가 와야 넘어갈수 있으니.. 구입할려고 하는데 기본 번호 이외 하나더추가를 1달러 이외 무슨 프리미엄 20달러 요구해서 일단 보류 문자 인증 안하고 할수 있는지 일단 구현만 해봄 임시 토큰으로 넣어놓고 테스트는 넘기는걸로
-- [ ] Compete Phone Nuber Verification (인증 문자 확인)
+- [X] Compete Phone Nuber Verification (인증 문자 확인)
 - [ ] Sign Up with Email (체크 완료시 Email 로그인)
 
 ---
 
-### Private Resolvers:
+### Authentication:
 
 - [ ] Generate JWT (JWT인증)
 - [ ] Verify JWWT(가입 확인)
+
+### Private Resolvers:
+
 - [ ] Verify Email (Email 확인)
 - [ ] Get my Profile (로그인 후 : 나의 프로필 출력)
 - [ ] Update my Profile (나의 프로필 수정)
