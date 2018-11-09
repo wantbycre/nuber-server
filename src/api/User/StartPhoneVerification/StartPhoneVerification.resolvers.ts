@@ -44,7 +44,7 @@ const resolvers: Resolvers = {
                 }
 
             } catch(error) {
-                // TODO: 그냥 인증없이 true 날려서 가능하다면 catch에서 그냥 ok: true 날려도 될까?
+                // TODO: 그냥 인증없이 true 날려서 가능하나 email 인증만 쓸것이기 때문에 그냥 false로
                 return {
                     ok: false,
                     error: error.message
