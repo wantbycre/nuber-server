@@ -36,6 +36,7 @@ const resolvers: Resolvers = {
                     updatedAt: 2018-11-07T06:55:05.655Z 
                 }
                 */
+               // TODO: 여기 콘솔에 상단 Key를 직접 집어 넣으면 됩니다. 오예!!!!!
                console.log(newVerification);
                 await sendVerificationSMS(newVerification.payload, newVerification.key);
                 return {
@@ -44,7 +45,6 @@ const resolvers: Resolvers = {
                 }
 
             } catch(error) {
-                // TODO: 그냥 인증없이 true 날려서 가능하나 email 인증만 쓸것이기 때문에 그냥 false로
                 return {
                     ok: false,
                     error: error.message
