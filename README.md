@@ -20,8 +20,9 @@ Server for the (N)Uber Clone Course on Nomad Academy. GraphQL, Typescript, NodeJ
 
 ### Private Resolvers:
 
-- [X] Verify Email (Email 확인)
 - [X] Get my Profile (로그인 후 : 나의 프로필 출력)
+- [ ] Request Email verification (이메일 받기 확인)
+- [ ] Complete Email (Email 확인)
 - [ ] Update my Profile (나의 프로필 수정)
 - [ ] Toggle Driving Mode (내가 운전자, 이용자 변경할수 있도록)
 - [ ] Report Location / Orientation (나의 폰 방향, 움직일때 좌표 변경할 위치)
