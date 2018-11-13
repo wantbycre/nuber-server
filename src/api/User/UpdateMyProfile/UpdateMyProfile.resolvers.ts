@@ -1,8 +1,8 @@
 import User from "../../../entities/User";
 import { UpdateMyProfileMutationArgs, UpdateMyProfileResponse } from "../../../types/graph";
 import { Resolvers } from "../../../types/resolvers";
-import cleanNullArgs from "../../utils/cleanNullArg";
-import privateResolver from "../../utils/privateResolver";
+import cleanNullArgs from "../../../utils/cleanNullArg";
+import privateResolver from "../../../utils/privateResolver";
 
 const resolvers: Resolvers = {
     Mutation: {
@@ -14,7 +14,7 @@ const resolvers: Resolvers = {
             ): Promise<UpdateMyProfileResponse> => {
                 const user: User = req.user;
                 //TODO: #1.59 여기서 작성할 내용이지만 미리 써있음 아마 니콜라스 순서가 뒤죽박죽된듯
-                const notNull: any = cleanNullArgs;
+                const notNull: any = cleanNullArgs(args);
                 if(notNull.password !== null) {
                     user.password = notNull.password;
                     user.save();

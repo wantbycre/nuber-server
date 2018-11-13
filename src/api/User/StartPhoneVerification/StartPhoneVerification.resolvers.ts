@@ -4,7 +4,7 @@ import {
     StartPhoneVerificationResponse 
 } from "../../../types/graph";
 import Verification from "../../../entities/Verification";
-import { sendVerificationSMS } from "../../utils/sendSMS";
+import { sendVerificationSMS } from "../../../utils/sendSMS";
 
 const resolvers: Resolvers = {
     Mutation: {

@@ -4,7 +4,7 @@ import {
   FacebookConnectResponse
 } from "../../../types/graph";
 import { Resolvers } from "../../../types/resolvers";
-import createJWT from "../../utils/dreateJWT";
+import createJWT from "../../../utils/dreateJWT";
 
 const resolvers: Resolvers = {
     Mutation: {

@@ -2,7 +2,7 @@ import User from "../../../entities/User";
 import { Resolvers } from "../../../types/resolvers";
 import { CompleteEmailVerificationMutationArgs, CompleteEmailVerificationResponse } from "../../../types/graph";
 import Verification from "../../../entities/Verification";
-import privateResolver from "../../utils/privateResolver";
+import privateResolver from "../../../utils/privateResolver";
 
 const resolvers: Resolvers = {
     Mutation: {

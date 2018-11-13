@@ -4,7 +4,7 @@ import { GraphQLServer } from "graphql-yoga";
 import helmet from "helmet";
 import logger from "morgan";
 import schema from "./schema";
-import decodeJWT from "./api/utils/decodeJWT";
+import decodeJWT from "./utils/decodeJWT";
 
 class App {
     public app: GraphQLServer;
