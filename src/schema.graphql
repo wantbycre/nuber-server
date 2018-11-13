@@ -82,7 +82,7 @@ type GetMyProfileResponse {
   user: User
 }
 
-type Queyr {
+type Query {
   GetMyProfile: GetMyProfileResponse!
 }
 
