@@ -28,7 +28,7 @@ Server for the (N)Uber Clone Course on Nomad Academy. GraphQL, Typescript, NodeJ
 - [X] Report Location / Orientation (나의 폰 방향, 움직일때 좌표 변경할 위치)
 - [X] Add Place (장소 추가)
 - [X] Edit Place (장소 수정)
-- [ ] Delete Place (장소 삭제)
+- [X] Delete Place (장소 삭제)
 - [ ] Get My Place (내 place 가져오기)
 - [ ] See Nearby Drivers (근처 모든 운전자 출력)
 - [ ] Subscribe To Nearby Derives (근처 및 특정 다른운전자 출력)
