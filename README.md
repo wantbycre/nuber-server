@@ -29,7 +29,7 @@ Server for the (N)Uber Clone Course on Nomad Academy. GraphQL, Typescript, NodeJ
 - [X] Add Place (장소 추가)
 - [X] Edit Place (장소 수정)
 - [X] Delete Place (장소 삭제)
-- [ ] Get My Place (내 place 가져오기)
+- [X] Get My Place (내 place 가져오기)
 - [ ] See Nearby Drivers (근처 모든 운전자 출력)
 - [ ] Subscribe To Nearby Derives (근처 및 특정 다른운전자 출력)
 - [ ] Requiest a Ride (운전자 요청)

@@ -1,4 +1,4 @@
-type AddPlaceResoponse{
+type AddPlaceResponse{
     ok: Boolean!
     error: String
 }
@@ -10,5 +10,5 @@ type Mutation {
         lng: Float!
         address: String!
         isFav: Boolean!
-    ): AddPlaceResoponse!
+    ): AddPlaceResponse!
 }
