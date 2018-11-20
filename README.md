@@ -36,6 +36,8 @@ Server for the (N)Uber Clone Course on Nomad Academy. GraphQL, Typescript, NodeJ
 - [x] Requiest a Ride (운전자 요청)
 - [x] Get Nearby Rides Requests (근처 운전자 요청 받아서 가져오기)
 - [x] Subscribe to Nearby Ride Requests (운전자 요청시 근처 운전자 요청 끊기)
+- [x] Update Ride Status (운전자 업데이트)
+- [x] Get Ride (운전자 가져오기)
 - [ ] Subscribe to Ride Status (운전자 요청이 받아들여졌는지 취소됐는지 알림)
 - [ ] Get Cat Room Message (합의된 사용자,운전자 챗팅방 생성)
 - [ ] Subscribe to Chat Room Message (챗팅방 확인)
