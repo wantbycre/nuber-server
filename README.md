@@ -38,10 +38,15 @@ Server for the (N)Uber Clone Course on Nomad Academy. GraphQL, Typescript, NodeJ
 - [x] Subscribe to Nearby Ride Requests (운전자 요청시 근처 운전자 요청 끊기)
 - [x] Update Ride Status (운전자 업데이트)
 - [x] Get Ride (운전자 가져오기)
-- [ ] Subscribe to Ride Status (운전자 요청이 받아들여졌는지 취소됐는지 알림)
-- [ ] Get Cat Room Message (합의된 사용자,운전자 챗팅방 생성)
-- [ ] Subscribe to Chat Room Message (챗팅방 확인)
+- [x] Subscribe to Ride Status (운전자 요청이 받아들여졌는지 취소됐는지 알림)
+- [x] Create a chat Room (채팅방 생성)
+- [x] Get Chat Room Message (합의된 사용자,운전자 챗팅방 생성)
 - [ ] Send a Chat Message (챗팅 주고 받기)
+- [ ] Subscribe to Chat Room Message (챗팅방 확인)
+
+* TODO: Get ride 및 chat subscribe Chat playground에서 확인을 못했습니다.
+* TODO: 아직 token에 대해 지식이 부족해서 get ride에서 잘 안됩니다.
+* TODO: 일단 테스트없이 front로 넘어갑니다. ride에서 chat 연결하는부분 테스트 없습니다.
 
 ## Code Challenge
 
