@@ -12,16 +12,16 @@ const resolvers: Resolvers = {
             _,
             args: StartPhoneVerificationMutationArgs
         ): Promise<StartPhoneVerificationResponse> => {
-            const { phoneNubmber } = args;
+            const { phoneNumber } = args;
             try {
                 const existingVerification = await Verification.findOne({ 
-                    payload: phoneNubmber 
+                    payload: phoneNumber 
                 });
                 if(existingVerification) {
                     existingVerification.remove();
                 }
                 const newVerification = await Verification.create ({
-                    payload: phoneNubmber,
+                    payload: phoneNumber,
                     target: "PHONE"
                 }).save();
                 /*
