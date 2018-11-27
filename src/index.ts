@@ -5,7 +5,7 @@ import { Options } from "graphql-yoga";
 import { createConnection } from "typeorm";
 import app from "./app";
 import ConnectionOptions from "./ormConfig";
-import decodeJWT from "./utils/decodeJWT";
+import createJWT from "./utils/createJWT";
 
 const PORT: number | string = process.env.PORT || 4000;
 const PLAYGROUND_ENDPOINT: string = "/playground";
@@ -21,7 +21,7 @@ const appOption: Options = {
     onConnect: async connectionParams => {
       const token = connectionParams["X-JWT"];
       if (token) {
-        const user = await decodeJWT(token);
+        const user = await createJWT(token);
         if (user) {
           return {
             currentUser: user

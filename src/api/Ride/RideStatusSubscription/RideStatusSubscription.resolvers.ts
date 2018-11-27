@@ -1,5 +1,6 @@
 import { withFilter } from "graphql-yoga";
 import User from "../../../entities/User";
+
 const resolvers = {
   Subscription: {
     RideStatusSubscription: {
@@ -16,4 +17,5 @@ const resolvers = {
     }
   }
 };
+
 export default resolvers;

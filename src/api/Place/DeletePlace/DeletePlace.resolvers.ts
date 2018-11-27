@@ -6,7 +6,8 @@ import {
 } from "../../../types/graph";
 import { Resolvers } from "../../../types/resolvers";
 import privateResolver from "../../../utils/privateResolver";
- const resolvers: Resolvers = {
+
+const resolvers: Resolvers = {
   Mutation: {
     DeletePlace: privateResolver(
       async (
@@ -46,4 +47,4 @@ import privateResolver from "../../../utils/privateResolver";
     )
   }
 };
- export default resolvers;
+export default resolvers;

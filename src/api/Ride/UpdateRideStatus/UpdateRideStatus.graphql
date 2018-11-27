@@ -2,6 +2,7 @@ type UpdateRideStatusResponse {
   ok: Boolean!
   error: String
 }
+
 enum StatusOptions {
   ACCEPTED
   FINISHED
@@ -9,6 +10,7 @@ enum StatusOptions {
   REQUESTING
   ONROUTE
 }
+
 type Mutation {
   UpdateRideStatus(
     rideId: Int!

@@ -3,6 +3,7 @@ import User from "../../../entities/User";
 import { GetRideQueryArgs, GetRideResponse } from "../../../types/graph";
 import { Resolvers } from "../../../types/resolvers";
 import privateResolver from "../../../utils/privateResolver";
+
 const resolvers: Resolvers = {
   Query: {
     GetRide: privateResolver(
@@ -44,4 +45,5 @@ const resolvers: Resolvers = {
     )
   }
 };
+
 export default resolvers;

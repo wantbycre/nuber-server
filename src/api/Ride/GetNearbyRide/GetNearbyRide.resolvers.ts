@@ -4,6 +4,7 @@ import User from "../../../entities/User";
 import { GetNearbyRideResponse } from "../../../types/graph";
 import { Resolvers } from "../../../types/resolvers";
 import privateResolver from "../../../utils/privateResolver";
+
 const resolvers: Resolvers = {
   Query: {
     GetNearbyRide: privateResolver(

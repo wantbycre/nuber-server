@@ -4,7 +4,7 @@ import { GraphQLServer, PubSub } from "graphql-yoga";
 import helmet from "helmet";
 import logger from "morgan";
 import schema from "./schema";
-import decodeJWT from "./utils/decodeJWT";
+import createJWT from "./utils/createJWT";
 
 class App {
   public app: GraphQLServer;
@@ -39,7 +39,7 @@ class App {
   ): Promise<void> => {
     const token = req.get("X-JWT");
     if (token) {
-      const user = await decodeJWT(token);
+      const user = await createJWT(token);
       if (user) {
         req.user = user;
       } else {

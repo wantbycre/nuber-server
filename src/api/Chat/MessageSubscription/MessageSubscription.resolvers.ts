@@ -1,6 +1,7 @@
 import { withFilter } from "graphql-yoga";
 import Chat from "../../../entities/Chat";
 import User from "../../../entities/User";
+
 const resolvers = {
   Subscription: {
     MessageSubscription: {
@@ -26,4 +27,5 @@ const resolvers = {
     }
   }
 };
+
 export default resolvers;
