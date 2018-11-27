@@ -1,12 +1,12 @@
-import { Resolvers } from "../../../types/resolvers";
-import privateResolver from "../../../utils/privateResolver";
+import Chat from "../../../entities/Chat";
+import Ride from "../../../entities/Ride";
+import User from "../../../entities/User";
 import {
   UpdateRideStatusMutationArgs,
   UpdateRideStatusResponse
 } from "../../../types/graph";
-import User from "../../../entities/User";
-import Ride from "../../../entities/Ride";
-import Chat from "../../../entities/Chat";
+import { Resolvers } from "../../../types/resolvers";
+import privateResolver from "../../../utils/privateResolver";
 
 const resolvers: Resolvers = {
   Mutation: {
@@ -75,5 +75,4 @@ const resolvers: Resolvers = {
     )
   }
 };
-
 export default resolvers;

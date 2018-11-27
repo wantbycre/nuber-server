@@ -1,11 +1,11 @@
-import { Resolvers } from "../../../types/resolvers";
-import privateResolver from "../../../utils/privateResolver";
+import Ride from "../../../entities/Ride";
+import User from "../../../entities/User";
 import {
   RequestRideMutationArgs,
   RequestRideResponse
 } from "../../../types/graph";
-import User from "../../../entities/User";
-import Ride from "../../../entities/Ride";
+import { Resolvers } from "../../../types/resolvers";
+import privateResolver from "../../../utils/privateResolver";
 
 const resolvers: Resolvers = {
   Mutation: {
@@ -37,7 +37,7 @@ const resolvers: Resolvers = {
         } else {
           return {
             ok: false,
-            error: "You can't request two rides or drive and requset",
+            error: "You can't request two rides or drive and request",
             ride: null
           };
         }

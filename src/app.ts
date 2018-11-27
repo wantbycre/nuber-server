@@ -1,10 +1,10 @@
 import cors from "cors";
-import { NextFunction, Response } from "../node_modules/@types/express";
+import { NextFunction, Response } from "express";
 import { GraphQLServer, PubSub } from "graphql-yoga";
 import helmet from "helmet";
 import logger from "morgan";
 import schema from "./schema";
-import createJWT from "./utils/createJWT";
+import decodeJWT from "./utils/decodeJWT";
 
 class App {
   public app: GraphQLServer;
@@ -39,7 +39,7 @@ class App {
   ): Promise<void> => {
     const token = req.get("X-JWT");
     if (token) {
-      const user = await createJWT(token);
+      const user = await decodeJWT(token);
       if (user) {
         req.user = user;
       } else {
@@ -51,5 +51,3 @@ class App {
 }
 
 export default new App().app;
-
-// TEst

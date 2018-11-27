@@ -13,17 +13,15 @@ const resolvers: Resolvers = {
       args: EmailSignInMutationArgs
     ): Promise<EmailSignInResponse> => {
       const { email, password } = args;
-
       try {
         const user = await User.findOne({ email });
         if (!user) {
           return {
-            ok: true,
-            error: "No User with that email",
+            ok: false,
+            error: "No user found with that email",
             token: null
           };
         }
-
         const checkPassword = await user.comparePassword(password);
         if (checkPassword) {
           const token = createJWT(user.id);
@@ -49,5 +47,4 @@ const resolvers: Resolvers = {
     }
   }
 };
-
 export default resolvers;

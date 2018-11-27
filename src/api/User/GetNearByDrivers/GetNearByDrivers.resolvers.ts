@@ -1,13 +1,13 @@
+import { Between, getRepository } from "typeorm";
+import User from "../../../entities/User";
+import { GetNearbyDriversResponse } from "../../../types/graph";
 import { Resolvers } from "../../../types/resolvers";
 import privateResolver from "../../../utils/privateResolver";
-import User from "../../../entities/User";
-import { GetNearByDriversResponse } from "../../../types/graph";
-import { Between, getRepository } from "../../../../node_modules/typeorm";
 
 const resolvers: Resolvers = {
   Query: {
-    GetNearByDrivers: privateResolver(
-      async (_, __, { req }): Promise<GetNearByDriversResponse> => {
+    GetNearbyDrivers: privateResolver(
+      async (_, __, { req }): Promise<GetNearbyDriversResponse> => {
         const user: User = req.user;
         const { lastLat, lastLng } = user;
         try {
@@ -32,5 +32,4 @@ const resolvers: Resolvers = {
     )
   }
 };
-
 export default resolvers;

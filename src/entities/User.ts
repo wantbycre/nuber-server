@@ -1,7 +1,3 @@
-// TODO: 니콜라스는 bcrypt 사용함 window에서 bcrypt 설치가 안되는바람에 임시로 사용
-// TODO: 맥으로 옮긴다면 사용
-// TODO: yarn global add node-gyp
-// TODO: yarn global add bcrypt
 import bcrypt from "bcrypt";
 import { IsEmail } from "class-validator";
 import {
@@ -15,11 +11,10 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn
 } from "typeorm";
-
 import Chat from "./Chat";
 import Message from "./Message";
-import Ride from "./Ride";
 import Place from "./Place";
+import Ride from "./Ride";
 
 const BCRYPT_ROUNDS = 10;
 

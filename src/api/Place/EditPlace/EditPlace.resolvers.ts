@@ -1,9 +1,9 @@
-import { Resolvers } from "../../../types/resolvers";
-import privateResolver from "../../../utils/privateResolver";
-import { EditPlaceMutationArgs, EditPlaceResponse } from "../../../types/graph";
-import User from "../../../entities/User";
 import Place from "../../../entities/Place";
+import User from "../../../entities/User";
+import { EditPlaceMutationArgs, EditPlaceResponse } from "../../../types/graph";
+import { Resolvers } from "../../../types/resolvers";
 import cleanNullArgs from "../../../utils/cleanNullArg";
+import privateResolver from "../../../utils/privateResolver";
 
 const resolvers: Resolvers = {
   Mutation: {
@@ -14,10 +14,8 @@ const resolvers: Resolvers = {
         { req }
       ): Promise<EditPlaceResponse> => {
         const user: User = req.user;
-
         try {
           const place = await Place.findOne({ id: args.placeId });
-
           if (place) {
             if (place.userId === user.id) {
               const notNull = cleanNullArgs(args);
@@ -35,7 +33,7 @@ const resolvers: Resolvers = {
           } else {
             return {
               ok: false,
-              error: "Place Not Found!"
+              error: "Place not found"
             };
           }
         } catch (error) {
@@ -48,5 +46,4 @@ const resolvers: Resolvers = {
     )
   }
 };
-
 export default resolvers;

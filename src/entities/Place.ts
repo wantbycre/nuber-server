@@ -3,9 +3,9 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  ManyToOne,
   PrimaryGeneratedColumn,
-  UpdateDateColumn,
-  ManyToOne
+  UpdateDateColumn
 } from "typeorm";
 import User from "./User";
 
@@ -35,7 +35,7 @@ class Place extends BaseEntity {
   user: User;
 
   @CreateDateColumn() createdAt: string;
+
   @UpdateDateColumn() updatedAt: string;
 }
-
 export default Place;

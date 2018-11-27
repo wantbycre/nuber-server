@@ -10,7 +10,7 @@ type Query {
   GetNearbyRide: GetNearbyRideResponse!
   GetRide(rideId: Int!): GetRideResponse!
   GetMyProfile: GetMyProfileResponse!
-  GetNearByDrivers: GetNearByDriversResponse!
+  GetNearbyDrivers: GetNearbyDriversResponse!
 }
 
 type Subscription {
@@ -190,7 +190,7 @@ type GetMyProfileResponse {
   user: User
 }
 
-type GetNearByDriversResponse {
+type GetNearbyDriversResponse {
   ok: Boolean!
   error: String
   drivers: [User]

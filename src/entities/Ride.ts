@@ -3,15 +3,15 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  JoinColumn,
   ManyToOne,
-  PrimaryGeneratedColumn,
-  UpdateDateColumn,
   OneToOne,
-  JoinColumn
+  PrimaryGeneratedColumn,
+  UpdateDateColumn
 } from "typeorm";
 import { rideStatus } from "../types/types";
-import User from "./User";
 import Chat from "./Chat";
+import User from "./User";
 
 @Entity()
 class Ride extends BaseEntity {
@@ -71,7 +71,7 @@ class Ride extends BaseEntity {
   chat: Chat;
 
   @CreateDateColumn() createdAt: string;
+
   @UpdateDateColumn() updatedAt: string;
 }
-
 export default Ride;

@@ -16,9 +16,8 @@ const resolvers: Resolvers = {
         { req }
       ): Promise<UpdateMyProfileResponse> => {
         const user: User = req.user;
-        //TODO: #1.59 여기서 작성할 내용이지만 미리 써있음 아마 니콜라스 순서가 뒤죽박죽된듯
         const notNull: any = cleanNullArgs(args);
-        if (notNull.password !== null) {
+        if (notNull.password) {
           user.password = notNull.password;
           user.save();
           delete notNull.password;

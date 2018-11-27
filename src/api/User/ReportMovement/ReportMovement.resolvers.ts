@@ -4,8 +4,8 @@ import {
   ReportMovementResponse
 } from "../../../types/graph";
 import { Resolvers } from "../../../types/resolvers";
-import privateResolver from "../../../utils/privateResolver";
 import cleanNullArgs from "../../../utils/cleanNullArg";
+import privateResolver from "../../../utils/privateResolver";
 
 const resolvers: Resolvers = {
   Mutation: {
@@ -17,11 +17,10 @@ const resolvers: Resolvers = {
       ): Promise<ReportMovementResponse> => {
         const user: User = req.user;
         const notNull = cleanNullArgs(args);
-
         try {
           await User.update({ id: user.id }, { ...notNull });
-          const updateUser = await User.findOne({ id: user.id });
-          pubSub.publish("driverUpdate", { DriversSubscription: updateUser });
+          const updatedUser = await User.findOne({ id: user.id });
+          pubSub.publish("driverUpdate", { DriversSubscription: updatedUser });
           return {
             ok: true,
             error: null

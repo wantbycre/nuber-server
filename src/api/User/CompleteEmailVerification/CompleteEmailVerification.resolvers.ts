@@ -1,10 +1,10 @@
 import User from "../../../entities/User";
-import { Resolvers } from "../../../types/resolvers";
+import Verification from "../../../entities/Verification";
 import {
   CompleteEmailVerificationMutationArgs,
   CompleteEmailVerificationResponse
 } from "../../../types/graph";
-import Verification from "../../../entities/Verification";
+import { Resolvers } from "../../../types/resolvers";
 import privateResolver from "../../../utils/privateResolver";
 
 const resolvers: Resolvers = {
@@ -19,7 +19,7 @@ const resolvers: Resolvers = {
         const { key } = args;
         if (user.email) {
           try {
-            const verification = Verification.findOne({
+            const verification = await Verification.findOne({
               key,
               payload: user.email
             });
@@ -33,7 +33,7 @@ const resolvers: Resolvers = {
             } else {
               return {
                 ok: false,
-                error: "Cant Verify Email"
+                error: "Cant verify email"
               };
             }
           } catch (error) {
